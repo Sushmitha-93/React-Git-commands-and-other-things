@@ -1,0 +1,84 @@
+ TO CREATE A REACT APP FROM SCRATCH
+create-react-app app-name
+npm start  
+_________________________________________________________________________________________
+ TO CLONE AND RUN FROM OTHER GIT HUB REPOSITORIES
+git clone gitRepositoryURLforProject
+cd projectName
+npm install
+npm start     
+_________________________________________________________________________________________
+ TO PUSH CHANGES TO GITHUB REPOSITORY
+git init
+git add .
+git commit -m "First commit"
+git remote add origin githubRepositoryURL    //(only for first commit)
+git push origin master
+
+----------------------------------------------------------------------------------------
+TO STOP NODE MODULES IN THE PROJECT TO GET UPLOADED TO GITHUB
+touch .gitignore && echo "node_modules/" >> .gitignore
+________________________________________________________________________________________
+ TO RUN REACT+NODE+MONGODB APP
+1) npm start     ($cd to React project file path)
+2) cd "C:\Program Files\MongoDB\Server\4.0\bin"
+   mongod.exe
+3) node index.js  ($cd to Node project File path)
+_________________________________________________________________________________________
+To REVERT changes done in VSCode and to have it synched up with previous commit in GITHUB
+1) Open GitHub desktop
+2) In left panel, Current Repository, Add your project folder
+3) There will be 2 tabs - Changes, History
+	Changes- Has changes done in VSCode after the previous commit
+	History- Has all the git commits done so far on the project
+4) If you want to revert the new changes done after last commit, 
+      Go to Changes tab, right click-> discard all changes
+5) If you want to revert changes done in specific commit,
+      Go to History, right click-> revert this commit
+_________________________________________________________________________________________
+TO DEPLOY REACT APPLICATION ON GITHUB PAGES -
+npm install --save gh-pages
+
+npm run deploy (Before running this do the below )
+
+----------------------------------------------------------------------------------------
+In package.json, add below
+
+"homepage":"https://Sushmitha-93.github.io/repository-name"
+
+"scripts":{
+ "predeploy": "npm run build",
+ "deploy": "gh-pages -d build",
+}
+
+____________________________________________________________________________________________
+BOOTSTRAP - Can either install in project folder or Use CDN links in index.js
+
+1) To Install:
+- npm install bootstrap (cd to project folder)
+- import "bootstrap/dist/css/bootstrap.css"; (In index.js file)
+				(OR)
+2)Add below links in index.js
+
+<link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
